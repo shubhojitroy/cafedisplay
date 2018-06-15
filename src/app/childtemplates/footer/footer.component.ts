@@ -10,7 +10,7 @@ import { PrivacypolicyDialogComponent } from '../../dialogs/privacypolicy-dialog
 })
 export class FooterComponent implements OnInit {
 
-  copyrightText = 'Copyright 2018 LINK Realty International All rights reserved';
+  copyrightText = 'Copyright 2018 LINK Realty International';
 
   constructor(private dialog: MatDialog) { }
 
