@@ -1,0 +1,17 @@
+<footer class="docs-footer">
+  <div class="fcontainer">
+    <div>
+      <button mat-button flex-start>{{ copyrightText }}</button>
+    </div>
+    <span class="spacer"></span>
+    <div>
+      <button mat-button [matMenuTriggerFor]="menu" flex-end>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="onOpenAddDisclaimerDialog()">Disclaimer</button>
+        <button mat-menu-item (click)="onOpenAddPrivacyPolicyDialog()">Privacy Policy</button>
+      </mat-menu>
+    </div>
+  </div>
+</footer>

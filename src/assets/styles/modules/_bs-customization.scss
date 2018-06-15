@@ -1,0 +1,18 @@
+.card-body{
+  background: $cardBodyBackground;
+}
+.btn {
+  background: none;
+  color: #4c77a4 !important;
+
+  &:hover{
+    color: #ffffff !important;
+  }
+}
+.btn-sm {
+  padding:5px 10px;
+  font-size:.66rem;
+}
+.table thead th {
+  color: #007bff;
+}

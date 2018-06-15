@@ -1,0 +1,24 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+.form-container form {
+  margin-bottom: 20px;
+}
+
+.form-container form > * {
+  margin: 5px 0;
+}
+
+.number-alignment {
+  text-align: right;
+}
+
+.form-field-full-width {
+  width: 100%;
+}

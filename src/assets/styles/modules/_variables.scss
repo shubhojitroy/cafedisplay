@@ -1,0 +1,33 @@
+$icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+//misc variables
+$mainBlue: #4c77a4;
+$mainRed: #aa253e;
+$mainTextColor: #58595b;
+$lightBlue:#0071b9;
+// $borderBlue: #0cbfdd;
+$borderTop: 5px solid #008de7;
+
+//body
+$bodyFontFamily: 'Oxygen', sans-serif;
+$bodyContainerPadding: 60px 15px 0;
+$bodyMargin:0;
+
+//navigation
+$navBarBackGroundColor: #ffffff;
+$navbarForegroundColor: #fefefe;
+$navbarBorderBottom:  3px solid#c0003c;
+
+//list
+$listPadding: 20px;
+$listBackground: rgba(220, 220, 220, .33);
+$listBorder: 1px solid rgba(225, 232, 237, 0.41);
+$listWidth: 100%;
+$listLineHeight:28px;
+$listFontSize: 1.1123em;
+$listLetterSpacing:.1122em;
+
+//footer
+$footerTextColor:#feffee;
+
+//BS4 style
+$cardBodyBackground: #bdbdbd1f;

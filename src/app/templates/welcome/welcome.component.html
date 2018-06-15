@@ -1,0 +1,16 @@
+<cd-header></cd-header>
+
+<img src="/assets/images/sydney-opera-house.jpg" border="0" alt="" [@transition]='state' />
+<mat-card>
+  <h2 class="doc-markdown-h2">{{ pageTitle }}</h2>
+  <mat-form-field class="example-full-width">
+    <br>
+    <input matInput [matDatepicker]="picker" placeholder="Select the date">
+    <mat-datepicker-toggle matSuffix [for]="picker">
+      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</mat-card>
+
+<cd-footer></cd-footer>

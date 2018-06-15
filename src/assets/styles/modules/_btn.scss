@@ -1,0 +1,36 @@
+.btn {
+  background: $mainBlue;
+  color: #fff !important;
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block;
+  cursor: pointer;
+
+  &__red {
+      background: $mainRed;
+  }
+  &__large {
+        padding: 1.1rem 1.9rem;
+
+        @mixin atSmall {
+          font-size: 1.25rem;
+        }
+  }
+  &-cta{
+    border: .05em solid #fff;
+    border-radius: 0;
+  }
+  &:hover {
+    background: $lightBlue;
+    transition: all .2s fade-in;
+  }
+}
+.mat-raised-button {
+  color: #ffffff !important;
+  background: $mainBlue;
+
+  &:hover{
+    background: $lightBlue;
+    transition: all .2s fade-in;
+  }
+}

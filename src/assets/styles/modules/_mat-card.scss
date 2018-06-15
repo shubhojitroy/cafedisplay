@@ -1,0 +1,32 @@
+.mat-card {
+  font-family: $bodyFontFamily;
+  font-style: normal;
+  color: $mainTextColor;
+  width: 75%;
+  margin: 1em auto;
+}
+
+.mat-card-image {
+  background-image: linear-gradient(90deg, rgba(0, 62, 126, .5), rgba(0, 113, 185, .4));
+  z-index: -999;
+}
+
+.mat-card-content {
+  font-size: 1em;
+}
+
+.mat-card-subtitle {
+  font-size: 1.2233em;
+  font-style: normal;
+  color: #476978;
+  line-height: 1.377em;
+}
+
+@media screen and (max-width: 800px) {
+  .mat-card-subtitle {
+    font-size: .7775em;
+    justify-content: center;
+    font-weight: normal;
+    text-align: center;
+  }
+}

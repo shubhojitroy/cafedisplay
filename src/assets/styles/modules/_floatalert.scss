@@ -1,0 +1,15 @@
+.float-container {
+  background-color: #ffffff;
+  border: .1em solid rgba(255, 255, 255, .3377);
+  outline: #e1e8ed 1px solid;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:720px) {
+  .float-container {
+    justify-content:center;
+    flex-direction: column-reverse;
+  }
+}
