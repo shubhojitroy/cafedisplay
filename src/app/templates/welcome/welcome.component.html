@@ -1,6 +1,8 @@
 <cd-header></cd-header>
 
-<img src="/assets/images/sydney-opera-house.jpg" border="0" alt="" [@transition]='state' /><br><br>
+<img src="/assets/images/sydney-opera-house.jpg" border="0" alt="" [@transition]='state' />
+<br>
+<br>
 <div class="card container" style="width: 75%;">
   <div class="card-body">
     <h2 class="card-title">{{ pageTitle }}</h2>
@@ -12,6 +14,17 @@
       </mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field> -->
+
+    <div class="input-group">
+      <label for="exampleInputPassword1" class="input-group-text" id="">Cafe Name&nbsp;&nbsp;</label>
+      <input type="text" class="form-control" [(ngModel)]='listFilter'>
+    </div>
+
+    <div class="input-group">
+      <h3>
+        Filtered by: {{ listFilter }}
+      </h3>
+    </div>
 
     <div class="table-responsive">
       <table class="table table-bordered" *ngIf='cafes && cafes.length'>

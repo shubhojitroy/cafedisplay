@@ -6,14 +6,25 @@ import { ICafe } from '../../models/icafe';
   selector: 'cd-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
-  animations: [ pageTransition ]
+  animations: [pageTransition]
 })
 export class WelcomeComponent implements OnInit {
-
   pageTitle = 'Cafe Shops Display';
 
   state = 'in';
 
+  _listFilter: string;
+  get listFilter(): string {
+    return this._listFilter;
+  }
+  set listFilter(value: string) {
+    this._listFilter = value;
+    this.filteredCafes = this.listFilter
+      ? this.performFilter(this.listFilter)
+      : this.cafes;
+  }
+
+  filteredCafes: ICafe[];
   cafes: ICafe[] = [
     {
       cafeID: 1,
@@ -57,10 +68,20 @@ export class WelcomeComponent implements OnInit {
     }
   ];
 
-  constructor() { }
-
-  ngOnInit() {
-    this.state = (this.state === 'in' ? 'out' : 'in');
+  constructor() {
+    this.filteredCafes = this.cafes;
+    this.listFilter = '';
   }
 
+  performFilter(filterBy: string): ICafe[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.cafes.filter(
+      (cafe: ICafe) =>
+        cafe.cafeName.toLocaleLowerCase().indexOf(filterBy) !== -1
+    );
+  }
+
+  ngOnInit() {
+    this.state = this.state === 'in' ? 'out' : 'in';
+  }
 }
