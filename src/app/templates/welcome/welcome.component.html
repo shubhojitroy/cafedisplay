@@ -1,16 +1,40 @@
 <cd-header></cd-header>
 
-<img src="/assets/images/sydney-opera-house.jpg" border="0" alt="" [@transition]='state' />
-<mat-card>
-  <h2 class="doc-markdown-h2">{{ pageTitle }}</h2>
-  <mat-form-field class="example-full-width">
-    <br>
-    <input matInput [matDatepicker]="picker" placeholder="Select the date">
-    <mat-datepicker-toggle matSuffix [for]="picker">
-      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
-    </mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
-  </mat-form-field>
-</mat-card>
+<img src="/assets/images/sydney-opera-house.jpg" border="0" alt="" [@transition]='state' /><br><br>
+<div class="card container" style="width: 75%;">
+  <div class="card-body">
+    <h2 class="card-title">{{ pageTitle }}</h2>
+    <!-- <mat-form-field class="example-full-width">
+      <br>
+      <input matInput [matDatepicker]="picker" placeholder="Select the date">
+      <mat-datepicker-toggle matSuffix [for]="picker">
+        <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field> -->
 
+    <div class="table-responsive">
+      <table class="table table-bordered" *ngIf='cafes && cafes.length'>
+        <thead>
+          <tr>
+            <th scope="col">Cafe Name</th>
+            <th scope="col">Cafe Owner</th>
+            <th scope="col">Opening Time</th>
+            <th scope="col">Closing Time</th>
+            <th scope="col">Open on Days of the Week</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let cafe of cafes'>
+            <td>{{ cafe.cafeName }}</td>
+            <td>{{ cafe.owner }}</td>
+            <td>{{ cafe.openTime }}</td>
+            <td>{{ cafe.closeTime }}</td>
+            <td>{{ cafe.dayOfTheWeek }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 <cd-footer></cd-footer>
