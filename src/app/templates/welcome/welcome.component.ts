@@ -10,7 +10,7 @@ import { ICafe } from '../../models/icafe';
 })
 export class WelcomeComponent implements OnInit {
 
-  pageTitle = 'Date Selection';
+  pageTitle = 'Cafe Shops Display';
 
   state = 'in';
 
