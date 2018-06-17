@@ -36,7 +36,7 @@ export class WelcomeComponent implements OnInit {
     },
     {
       cafeID: 2,
-      cafeName: 'CBD shop of Coffeee',
+      cafeName: 'CBD shop of Coffee',
       owner: 'Jane Bloggs',
       openTime: '07:00 am',
       closeTime: '03:00 pm',
