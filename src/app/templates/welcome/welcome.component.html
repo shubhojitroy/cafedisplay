@@ -1,6 +1,13 @@
 <cd-header></cd-header>
-
-<img class="hero-image" src="./assets/images/sydney-opera-house.jpg" border="0" alt="" [@transition]='state' />
+<div class="large-hero">
+  <img class="hero-image large-hero__image" src="./assets/images/sydney-opera-house.jpg" border="0" alt="" [@transition]='state' />
+  <div class="large-hero__text-content">
+    <div class="wrapper">
+      <h1 class="large-hero__title">Innovative Project Marketing</h1>
+      <p class="large-hero__description">NETWORK OF LOCAL AGENCIES</p>
+    </div>
+  </div>
+</div>
 <br>
 <br>
 <div class="card container" style="width: 75%;">
@@ -15,9 +22,10 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field> -->
 
-    <div class="input-group">
+    <div class="input-group large-hero">
       <label for="exampleInputPassword1" class="input-group-text" id="">Input any letter(s) of cafe name&nbsp;&nbsp;</label>
       <input type="text" class="form-control" [(ngModel)]='listFilter'>
+
     </div>
 
     <div class="input-group">

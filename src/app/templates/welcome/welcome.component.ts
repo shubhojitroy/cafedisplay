@@ -52,7 +52,7 @@ export class WelcomeComponent implements OnInit {
     },
     {
       cafeID: 4,
-      cafeName: 'Coffeee Superior',
+      cafeName: 'Coffee Superior',
       owner: 'Clark Gabel',
       openTime: '07:00 am',
       closeTime: '01:00 pm',
